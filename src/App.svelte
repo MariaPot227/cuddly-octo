@@ -30,9 +30,14 @@
 
 <Header />
 
-{#each meetups as meetup}
-    <MeetupItems />
-{/each}
+<section class="meetups">
+    {#each meetups as meetup}
+        <MeetupItems />
+    {/each}
+</section>
 
 <style>
+    .meetups {
+        margin-top: 5rem;
+    }
 </style>
