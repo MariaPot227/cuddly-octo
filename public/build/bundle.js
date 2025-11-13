@@ -391,10 +391,10 @@ var app = (function () {
     			header = element("header");
     			h1 = element("h1");
     			h1.textContent = "MeetUs";
-    			attr_dev(h1, "class", "svelte-f3mj4q");
-    			add_location(h1, file, 2, 4, 16);
-    			attr_dev(header, "class", "svelte-f3mj4q");
-    			add_location(header, file, 1, 0, 2);
+    			attr_dev(h1, "class", "svelte-np3sfa");
+    			add_location(h1, file, 5, 4, 43);
+    			attr_dev(header, "class", "svelte-np3sfa");
+    			add_location(header, file, 4, 0, 29);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");

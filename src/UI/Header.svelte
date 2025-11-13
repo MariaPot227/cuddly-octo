@@ -1,3 +1,6 @@
+<script>
+    
+</script>
 
 <header>
     <h1>MeetUs</h1>
@@ -21,5 +24,4 @@
         font-family: 'Roboto Slab', serif;
         margin: 0;
     }
-
 </style>
