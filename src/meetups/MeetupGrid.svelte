@@ -6,7 +6,7 @@
 
 <section class="meetups">
     {#each meetups as meetup}
-        <MeetupItems title={meetup.title} subtitle={meetup.subtitle} imageUrl={meetup.imageUrl} description={meetup.description} address={meetup.address} email={meetup.contactEmail}/>
+        <MeetupItems title={meetup.title} subtitle={meetup.subtitle} imageUrl={meetup.imageUrl} description={meetup.description} address={meetup.address} contactEmail={meetup.contactEmail}/>
     {/each}
 </section>
 

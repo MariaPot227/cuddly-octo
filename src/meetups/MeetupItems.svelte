@@ -5,7 +5,7 @@
     export let imageUrl;
     export let description;
     export let address;
-    export let email;
+    export let contactEmail;
 </script>
 
 <article>
@@ -15,13 +15,13 @@
         <p>{address}</p>
     </header>
     <div class="image">
-        <img src="{imageUrl}" alt="{title}">
+        <img src={imageUrl} alt={title}>
     </div>
     <div class="content">
         <p>{description}</p>
     </div>
     <footer>
-        <a href="mainto:{email}">Contact</a>
+        <a href={contactEmail}>Contact</a>
         <button>Show Details</button>
         <button>Favourite</button>
     </footer>

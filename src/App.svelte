@@ -1,8 +1,16 @@
 <script>
+    import { prevent_default } from "svelte/internal";
     import Header from "./UI/Header.svelte";
     import MeetupGrid from "./meetups/MeetupGrid.svelte";
 
-    const meetups = [
+    let title = '';
+    let subtitle = '';
+    let address = '';
+    let contactEmail = '';
+    let description = '';
+    let imageUrl = '';
+
+    let meetups = [
         {
             id: "m1",
             title: "Coding Bootcamp",
@@ -26,13 +34,60 @@
             contactEmail: "swim@test.com",
         },
     ];
+
+    function addMeetup() {
+        const newMeetup = {
+            id: Math.random().toString(),
+            title: title,
+            subtitle: subtitle,
+            description: description,
+            imageUrl: imageUrl,
+            address: address,
+            contactEmail: contactEmail
+        };
+
+        meetups = [...meetups, newMeetup]; 
+
+    }
 </script>
 
 <Header />
 <main>
+    
+    <form on:submit|preventDefault={addMeetup}>
+        <div class="form-control">
+            <label for="title">Title</label>
+            <input type="text" bind:value={title}>
+        </div>
+        <div class="form-control">
+            <label for="subtitle">Subtitle</label>
+            <input type="text" bind:value={subtitle}>
+        </div>
+        <div class="form-control">
+            <label for="address">Address</label>
+            <input type="text"bind:value={address}>
+        </div>
+        <div class="form-control">
+            <label for="imageUrl">ImageUrl</label>
+            <input type="text" bind:value={imageUrl}>
+        </div>
+        <div class="form-control">
+            <label for="email">Email</label>
+            <input type="email" bind:value={contactEmail}>
+        </div>
+        <div class="form-control">
+            <label for="description">Description</label>
+            <textarea rows="3" bind:value={description}></textarea>
+        </div>
+        <button type="submit">Save</button>
+    </form>
+
     <MeetupGrid {meetups}/>
 </main>
 
 <style>
+    main {
+        margin-top: 5rem;
+    }
     
 </style>
